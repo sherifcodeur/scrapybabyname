@@ -11,7 +11,7 @@ const { JSDOM } = jsdom;
 
 const baby = require('../models/Baby');
 
-axiosThrottle.use(axios, { requestsPerSecond: 25 });
+axiosThrottle.use(axios, { requestsPerSecond: 1 });
 
 
 // letter A 
@@ -20,7 +20,7 @@ axiosThrottle.use(axios, { requestsPerSecond: 25 });
 let promises = [];
 
 
-for (let page=1 ; page<10 ; page++){
+for (let page=1 ; page<53 ; page++){
 
     promises.push(
 
