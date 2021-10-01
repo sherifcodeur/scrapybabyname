@@ -1,2 +1,2 @@
 # scrapyjoby
-scrap a list of companies websites taht offers jobs and save them in a json database
+scrap a list of baby names and put them in a mongodb

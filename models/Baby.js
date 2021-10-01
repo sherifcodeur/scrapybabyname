@@ -1,5 +1,5 @@
 
-    // Job Model
+    // Baby Model
 
 
     //importing external dependencies
@@ -7,27 +7,21 @@
 
 
 
-    // creating Job Schema
+    // creating Baby Schema
     const Schema = mongoose.Schema;
-    const jobSchema = new Schema({
+    const babySchema = new Schema({
 
-        title : {
+        name : {
             type:String,
             required:[true,'required field'],       
         },
-        city:{
-
-            type:String,
-
-        },
-        description:{
+        gender:{
             type:String
         },
-        date:{
-            type:Date,
-
+        origin:{
+            type:String
         },
-        url:{
+        popularity:{
             type:String
         }
     
@@ -37,10 +31,10 @@
     );
 
 
-    // creating model Job based on the job schema
-    const Job = mongoose.model('job',jobSchema);
+    // creating model Baby based on the baby schema
+    const Baby = mongoose.model('baby',babySchema);
 
 
 
-    //exporting the model Job
-    module.exports =  Job ;
+    //exporting the model Baby
+    module.exports =  Baby ;

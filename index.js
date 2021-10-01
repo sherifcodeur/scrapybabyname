@@ -3,6 +3,8 @@
     const express = require('express');
     const dotenv = require('dotenv').config();
     const dbconnect = require('./database/connection');
+
+    const grab = require('./robots/babiesNameRobot')
     
     //importing routes - example company routes -
     //const companyRoutes = require('./routes/companyRoutes');
@@ -30,9 +32,10 @@
     
     
     // checks if server is working
-    // app.get('/', (req, res, next) => {
-    //   res.send('Hello from my Express server v2!')
-    // })
+    app.get('/', (req, res) => {
+      grab
+      res.send('Hello from my Express server v2!')
+    })
     
 
     // app listens on the selected Port
