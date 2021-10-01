@@ -5,6 +5,8 @@
     //importing external dependencies
     const mongoose = require('mongoose');
 
+    const uniqueValidator = require('mongoose-unique-validator');
+
 
 
     // creating Baby Schema
@@ -13,7 +15,8 @@
 
         name : {
             type:String,
-            required:[true,'required field'],       
+            required:[true,'required field'],
+            unique:true,       
         },
         gender:{
             type:String
@@ -30,9 +33,13 @@
         { timestamps: true }
     );
 
+    babySchema.plugin(uniqueValidator);
 
+    
     // creating model Baby based on the baby schema
     const Baby = mongoose.model('baby',babySchema);
+
+    
 
 
 
