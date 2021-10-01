@@ -1,5 +1,7 @@
 
 
+// this bot tahke from one unqiue page at a time
+
 const axios = require('axios')
 
 const jsdom = require('jsdom')
