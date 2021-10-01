@@ -33,7 +33,7 @@
     
     // checks if server is working
     app.get('/', (req, res) => {
-      grab
+      
       res.send('Hello from my Express server v2!')
     })
     
