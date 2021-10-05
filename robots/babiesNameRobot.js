@@ -1,6 +1,6 @@
 
 
-// this bot tahke from one unqiue page at a time
+// this bot take from one unique page at a time
 
 const axios = require('axios')
 
@@ -11,7 +11,7 @@ const { JSDOM } = jsdom;
 const baby = require('../models/Baby');
 
 
-// letter A 
+// letter A first page
 
 const grab = axios('https://www.bounty.com/pregnancy-and-birth/baby-names/baby-name-search/a?PageNumber=1#ListingTop').then(response=>{
 
@@ -33,10 +33,10 @@ const grab = axios('https://www.bounty.com/pregnancy-and-birth/baby-names/baby-n
     thelis.forEach(element=>{
 
 
-        console.log(element.querySelector('.name').textContent)
-        console.log(element.querySelector('.gender').textContent)
-        console.log(element.querySelector('.origin').textContent)
-        console.log(element.querySelector('.popularity').textContent)
+        // console.log(element.querySelector('.name').textContent)
+        // console.log(element.querySelector('.gender').textContent)
+        // console.log(element.querySelector('.origin').textContent)
+        // console.log(element.querySelector('.popularity').textContent)
 
         let thename = element.querySelector('.name').textContent
         let thegender = element.querySelector('.gender').textContent
